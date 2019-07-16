@@ -10,12 +10,13 @@ let noise = true;
 let on = false;
 let win;
 
-let oneNoise = new Audio('sounds/b1.mp3');
-let twoNoise = new Audio('sounds/b2.mp3');
-let threeNoise = new Audio('sounds/b3.mp3');
-let fourNoise = new Audio('sounds/b4.mp3');
+let oneNoise = new Audio('sounds/drop.mp3');
+let twoNoise = new Audio('sounds/pop.mp3');
+let threeNoise = new Audio('sounds/seagull.ogg');
+let fourNoise = new Audio('sounds/arr.mp3');
 let startNoise = new Audio('sounds/startSound.ogg');
 let offNoise = new Audio('sounds/off.ogg');
+let winNoise = new Audio('sounds/winSound.wav');
 
 
 const turnCounter = document.querySelector("#turn");
@@ -61,6 +62,7 @@ onButton.addEventListener('click', (event) => {
         }, 800);
     }
 });
+
 function startSound() {
     if (noise) {
         startNoise.play();
@@ -228,7 +230,7 @@ function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
         good = false;
 
-    if (playerOrder.length == 3 && good) {
+    if (playerOrder.length == 20 && good) {
         winGame();
     }
     if (good == false) {
@@ -263,7 +265,16 @@ function check() {
 
 function winGame() {
     flashColor();
+    winSound();
     turnCounter.innerHTML = "win!!";
     on = false;
     win = true;
+}
+
+function winSound() {
+    if (noise) {
+        winNoise.play();
+    }
+    noise = true;
+
 }

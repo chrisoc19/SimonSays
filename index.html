@@ -5,49 +5,78 @@
   <meta charset="UTF-8">
   <title>Simon Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <audio id="clip1">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
-  </audio>
-  <audio id="clip2">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
-  </audio>
-  <audio id="clip3">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
-  </audio>
-  <audio id="clip4">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
-  </audio>
 </head>
 
 <body>
+  
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text text-box">
+        <h1>Simon Game!</h1>
+  <p>To begin please turn the power on. Then when ready to play press start!  </p>
+  <p>If strict mode is on you get only one chance so be careful!!</p>
+      </div>
+      
+    </div>
+  
+  
+  <div class="row">
+    <div class="col-sm-2 switches-wrapper">
+      <div class="switches">
+  
+   <p>POWER</p>
+  <label class="switch">
+  <input type="checkbox" class="switch" id="on">
+  <span class="slider round"></span>
+</label>
 
-  <div id="outer-circle">
+  <div id="turn"></div>
+  <div class="text2">
+    COUNT
+  </div>
+  <div class ="button-container">
+    <button class="button" id="start">Start</button>
+    </div>
+    
+
+</label>
+
+  <p>STRICT</p>
+  <label class="switch">
+  <input type="checkbox" class="switch" id="strict">
+  <span class="slider round"></span>
+</label>
+  
+</div>
+    </div>
+    <div class="col-sm-8">
+      <div class="circle">
     <div id="topleft"></div>
     <div id="topright"></div>
     <div id="bottomleft"></div>
     <div id="bottomright"></div>
-    <div id="inner-circle">
-      <div id="title" class="font-effect-emboss">SIMON!</div>
-      <div id="switches">
-        <input type="checkbox" class="toggle" id="on">
-        <button class="button" id="start">Start</button>
-        <input type="checkbox" class="toggle" id="strict">
-      </div>
-      <div class="text1">
-        <span>POWER</span><span>STRICT</span>
-      </div>
-      <div id="turn"></div>
-      <div class="text2">
-        COUNT
-      </div>
-    </div>
   </div>
+    </div>
+    
+  </div>
+</div>
+  
 
-  <script  src="js/index.js"></script>
+
+
+  
+    
+
+  
+  
+
+  <script src="js/index.js"></script>
 
 </body>
+
 </html>
