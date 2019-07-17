@@ -28,15 +28,18 @@ const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
+//--------------------------------------------------------------- strictButton
 strictButton.addEventListener('change', (event) => {
     if (strictButton.checked == true) {
         strict = true;
-    }
+        play();
+    } 
     else {
         strict = false;
+        play();
     }
 });
-
+//--------------------------------------------------------------- onButton
 onButton.addEventListener('click', (event) => {
     if (onButton.checked == true) {
         on = true;
@@ -78,7 +81,7 @@ function off() {
     noise = true;
 
 }
-//---------------------------------------------------------------
+//---------------------------------------------------------------startButton
 startButton.addEventListener('click', (event) => {
     if (on || win) {
         play();
@@ -184,6 +187,7 @@ topLeft.addEventListener('click', (event) => {
             }, 300);
         }
     }
+    
 });
 
 topRight.addEventListener('click', (event) => {
@@ -235,7 +239,7 @@ function check() {
     }
     if (good == false) {
         flashColor();
-        turnCounter.innerHTML = "NO!";
+        turnCounter.innerHTML = "NO";
         setTimeout(() => {
             turnCounter.innerHTML = turn;
             clearColor();

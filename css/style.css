@@ -1,5 +1,5 @@
 body {
-  margin-bottom: -200px;
+  padding-bottom: 20px;
   background-image: url("../img/sea.2.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ body {
 
 
 .switches-wrapper {
-  margin-left: 40px;
+  margin-left: 20px;
    background-color: rgba(0, 123, 255, 0);
 }
 
@@ -129,7 +129,7 @@ input:checked+.slider:before {
   font-family: 'Original Surfer', cursive;
   margin-top: 170px;
   margin-bottom: 50px;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 
