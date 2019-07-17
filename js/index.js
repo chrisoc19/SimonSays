@@ -14,10 +14,11 @@ let win;
 let oneNoise = new Audio('sounds/drop.mp3');
 let twoNoise = new Audio('sounds/pop.mp3');
 let threeNoise = new Audio('sounds/seagull.ogg');
-let fourNoise = new Audio('sounds/arr.mp3');
+let fourNoise = new Audio('sounds/radar.wav');
 let startNoise = new Audio('sounds/startSound.ogg');
 let offNoise = new Audio('sounds/off.ogg');
 let winNoise = new Audio('sounds/winSound.wav');
+let strictNoise = new Audio('sounds/b1.wav');
 
 
 const turnCounter = document.querySelector("#turn");
@@ -31,14 +32,40 @@ const startButton = document.querySelector("#start");
 
 //--------------------------------------------------------------- strictButton
 strictButton.addEventListener('change', (event) => {
+    if (onButton.checked == false) {
+        document.getElementById("#strict").disabled = true;
+
+    }
     if (strictButton.checked == true) {
         strict = true;
-    } 
+        strictSound();
+        clearInterval(intervalId);
+        turnCounter.innerHTML = "-";
+        flashColor();
+        setTimeout(() => {
+            clearColor();
+        }, 800);
+
+    }
     else {
         strict = false;
-      
+        strictSound();
+        turnCounter.innerHTML = "-";
+        flashColor();
+        setTimeout(() => {
+            clearColor();
+        }, 800);
+
     }
 });
+
+function strictSound() {
+    if (noise) {
+        strictNoise.play();
+    }
+    noise = true;
+
+}
 //--------------------------------------------------------------- onButton
 onButton.addEventListener('click', (event) => {
     if (onButton.checked == true) {
@@ -55,15 +82,19 @@ onButton.addEventListener('click', (event) => {
         turnCounter.innerHTML = "Bye";
         setTimeout(() => {
             turnCounter.innerHTML = "";
-        }, 800);
-        
+        }, 1000);
         clearInterval(intervalId);
         off();
         flashColor();
         setTimeout(() => {
             clearColor();
         }, 800);
+        setTimeout(() => {
+            document.location.reload(true);
+        }, 200);
+        
     }
+    
 });
 
 function startSound() {
@@ -85,9 +116,12 @@ function off() {
 startButton.addEventListener('click', (event) => {
     if (on || win) {
         play();
+        start = true;
     }
     if (onButton.checked == false) {
         startButton = 'unclick';
+        start = false;
+        
     }
 });
 //---------------------------------------------------------------play()
@@ -168,7 +202,7 @@ function clearColor() {
     bottomLeft.style.backgroundColor = "goldenrod";
     bottomRight.style.backgroundColor = "darkblue";
 }
-//---------------------------------------------------------------sclear flash 
+//---------------------------------------------------------------  flash Colors
 function flashColor() {
     topLeft.style.backgroundColor = "lightgreen";
     topRight.style.backgroundColor = "tomato";
@@ -177,7 +211,7 @@ function flashColor() {
 }
 //---------------------------------------------------------------Click Events
 topLeft.addEventListener('click', (event) => {
-    if (on) {
+    if (on && start) {
         playerOrder.push(1);
         check();
         one();
@@ -187,11 +221,11 @@ topLeft.addEventListener('click', (event) => {
             }, 300);
         }
     }
-    
+
 });
 
 topRight.addEventListener('click', (event) => {
-    if (on) {
+    if (on && start) {
         playerOrder.push(2);
         check();
         two();
@@ -204,7 +238,7 @@ topRight.addEventListener('click', (event) => {
 });
 
 bottomLeft.addEventListener('click', (event) => {
-    if (on) {
+    if (on && start) {
         playerOrder.push(3);
         check();
         three();
@@ -218,7 +252,7 @@ bottomLeft.addEventListener('click', (event) => {
 });
 
 bottomRight.addEventListener('click', (event) => {
-    if (on) {
+    if (on && start) {
         playerOrder.push(4);
         check();
         four();
@@ -234,12 +268,12 @@ function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
         good = false;
 
-    if (playerOrder.length == 20 && good) {
+    if (playerOrder.length == 3 && good) {
         winGame();
     }
     if (good == false) {
         flashColor();
-        turnCounter.innerHTML = "NO";
+        turnCounter.innerHTML = "NO!";
         setTimeout(() => {
             turnCounter.innerHTML = turn;
             clearColor();
@@ -270,7 +304,7 @@ function check() {
 function winGame() {
     flashColor();
     winSound();
-    turnCounter.innerHTML = "win!!";
+    turnCounter.innerHTML = "win!";
     on = false;
     win = true;
 }

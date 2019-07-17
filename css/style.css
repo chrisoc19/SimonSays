@@ -145,7 +145,8 @@ input:checked+.slider:before {
 
 #turn {
   position: absolute;
-  background: #330000;
+  background: rgba(0,123,255,.5);
+  /*background: #330000;*/
   color: red;
   font-family: courier;
   font-size: 20px;
