@@ -6,6 +6,7 @@ let good;
 let compTurn;
 let intervalId;
 let strict = false;
+let start = false;
 let noise = true;
 let on = false;
 let win;
@@ -90,7 +91,7 @@ startButton.addEventListener('click', (event) => {
         startButton = 'unclick';
     }
 });
-
+//---------------------------------------------------------------play()
 function play() {
     win = false;
     order = [];
@@ -107,7 +108,7 @@ function play() {
 
     intervalId = setInterval(gameTurn, 800);
 }
-
+//---------------------------------------------------------------GameTurn  ()
 function gameTurn() {
     on = false;
 
@@ -129,7 +130,7 @@ function gameTurn() {
         }, 200);
     }
 }
-
+//--------------------------------------------------------------- Function 1 - 4
 function one() {
     if (noise) {
         oneNoise.play();
@@ -161,21 +162,21 @@ function four() {
     noise = true;
     bottomRight.style.backgroundColor = "lightskyblue";
 }
-
+//---------------------------------------------------------------clear color
 function clearColor() {
     topLeft.style.backgroundColor = "darkgreen";
     topRight.style.backgroundColor = "darkred";
     bottomLeft.style.backgroundColor = "goldenrod";
     bottomRight.style.backgroundColor = "darkblue";
 }
-
+//---------------------------------------------------------------sclear flash 
 function flashColor() {
     topLeft.style.backgroundColor = "lightgreen";
     topRight.style.backgroundColor = "tomato";
     bottomLeft.style.backgroundColor = "yellow";
     bottomRight.style.backgroundColor = "lightskyblue";
 }
-
+//---------------------------------------------------------------Click Events
 topLeft.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(1);
@@ -229,7 +230,7 @@ bottomRight.addEventListener('click', (event) => {
         }
     }
 });
-
+//---------------------------------------------------------------Check()
 function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
         good = false;
@@ -266,7 +267,7 @@ function check() {
         intervalId = setInterval(gameTurn, 800);
     }
 }
-
+//---------------------------------------------------------------winGame
 function winGame() {
     flashColor();
     winSound();
