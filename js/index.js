@@ -33,11 +33,10 @@ const startButton = document.querySelector("#start");
 strictButton.addEventListener('change', (event) => {
     if (strictButton.checked == true) {
         strict = true;
-        play();
     } 
     else {
         strict = false;
-        play();
+       play();
     }
 });
 //--------------------------------------------------------------- onButton
