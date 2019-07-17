@@ -36,7 +36,7 @@ strictButton.addEventListener('change', (event) => {
     } 
     else {
         strict = false;
-       play();
+      
     }
 });
 //--------------------------------------------------------------- onButton
