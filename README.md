@@ -1,13 +1,22 @@
     
    
-    # SeaSimonSays
+### Simon Game.
+The Simon game is the exciting memory game of lights and sounds in which players must repeat random sequences of lights by pressing the colored pads in the correct order. It's a enterainting and edecational game, with lights and sounds that can challenge you and is designed for children under 10 years old, The desgin is to give an overall feel of child friendly environment. Features include a Power button to turn on and off everything, a Start button to start the game sequence when user is ready and a Strict mode button which if selected will restart the game if the user gets a guess wrong.The user must complete 20 rounds to win the game. 
+
 
 A live version can be found on [Github Pages](https://chrisoc19.github.io/SimonSays/)
  
-## UX
-This is single page application which  to allow users to play a fun and educational game.The Simon game is the exciting game of lights and sounds in which players must repeat random sequences of lights by pressing the colored pads in the correct order. It's fast-paced play, with lights and sounds that can challenge you.
-
+### UX
+##Project Goals
 - As a user, I expect to be able to power on and off the game.
+- As a user, I am presented with a random series of button presses.
+- As a user, Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
+- As a user, I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
+- As a user,  If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
+- As a user, I can see how many steps are in the current series of button presses.
+- As a user, If I want to restart, I can hit a button to do so, and the game will return to a single step.
+- As a user,
+- As a user,
 
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
