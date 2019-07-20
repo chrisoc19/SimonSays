@@ -1,7 +1,7 @@
     
    
 ### Simon Game.
-The Simon game is the exciting memory game of lights and sounds in which players must repeat random sequences of lights by pressing the colored pads in the correct order. It's a enterainting and edecational game, with lights and sounds that can challenge you and is designed for children under 10 years old, The desgin is to give an overall feel of child friendly environment. Features include a Power button to turn on and off everything, a Start button to start the game sequence when user is ready and a Strict mode button which if selected will restart the game if the user gets a guess wrong.The user must complete 20 rounds to win the game. 
+The Simon game is a exciting memory game of lights and sounds in which players must repeat random sequences of lights by pressing the colored pads in the correct order. It's a enterainting and edecational game, with lights and sounds that can challenge you and is designed for children under 10 years old, the desgin gives an overall feel of a child friendly environment. Features include a Power button to turn on and off everything, a Start button to start the game sequence when user is ready and a Strict mode button which if selected will restart the game if the user gets a guess wrong.The user must complete 20 rounds to win the game. 
 
 
 A live version can be found on [Github Pages](https://chrisoc19.github.io/SimonSays/)
@@ -27,17 +27,66 @@ Simon Game is a great way to help players meet these needs because:
 - Simon Game gives a child a fun environment in which to practice their memory skills.
 - It has been designed with user experience as a priority, not only for a child using it but also for a parent.
 
+## User story
+- I am presented with a random series of button presses.
+- Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
+- I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
+- If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
+- I can see how many steps are in the current series of button presses.
+- If I want to restart, I can hit the Start button, and the game will return to a single step.
+-  I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
+-  I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
+
+## Design choices
+The overall feel of the game is for children to enjoy. The following design choices were made with this in mind:
+
+# Fonts
+The font I chose was 'Original Surfer' because it sticks nicely with my sea theme. Its also very clear and easy to read.
+
+# Colors
+The colors I chose where inspired by the orignal Simon Game. They also fit in nicely with the background.
+
+# Background
+The background was chosen was a sea theme. I chose this theme as I think it will be apealing to my target audience children.
+
+# Audio files
+- To continue the feeling of a game made for children,The button sounds are similar to the sounds that a child might expect to hear when at the beach or at sea.
+- The sounds of the Power button and Strict button where added to add to the feel of the game.
+- The win sound was added to give positive feedback on use of the game.
+
+## Wireframes
+I used [Balsamiq](https://balsamiq.com/) for the design and planning process for this project.
+- [Balsamiq](https://balsamiq.com/)
+- [Balsamiq](https://balsamiq.com/)
+[Balsamiq](https://balsamiq.com/)
+
+
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- On arriving at the page, the user can read a quick game description on the top of the page.
 
+- The power button 
+- The power button is the button that turns on the game.
+                   - If the power button is not selected the start button and strict button are disabled.
+                   - A noise is played button when checked/unchecked.
+                   - All tiles flash when checked/unchecked.
+                   - When unchecked restarts the javaScript.
+                   
+- The Start button 
+-  All tiles are unclickable until start button is clicked.
+                   -  Starts the game sequence. 
+                   - If clicked on during game play will reset the game.
+                   
+- The strict button  
+-                 
+                   
+                   
+                   
+                   
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
