@@ -126,69 +126,66 @@ I  tested the Javascript [jshint.com](https://jshint.com/).
 #Tests
 1. Power Button:
    While Power button is unchecked:
-    1. The colored circle is not clickable. 
-    2. Start button is disabled.
-    3. Strict button is disabled.
-    4. Counter box is empty.
-  While Power button is checked:
-    1. A sound is played.
-    2. All colors "Flash".
-    3. The colored circle is not clickable.
-    4. Start button is now clickable.
-    5. Strict button is now clickable.
-    6. Counter box reads "-".
+    - The colored circle is not clickable. 
+    - Start button is disabled.
+    - Strict button is disabled.
+    - Counter box is empty.
     
-2.Start Button:
+  While Power button is checked:
+    - A sound is played.
+    - All colors "Flash".
+    - The colored circle is not clickable.
+    - Start button is now clickable.
+    - Strict button is now clickable.
+    - Counter box reads "-".
+    
+2. Start Button:
    While Start button is unchecked:
-    1. The colored circle is not clickable.
-    2. Counter box reads "-".
+    - The colored circle is not clickable.
+    - Counter box reads "-".
+    
    While Start button is checked:
-    1. The game is started.
-    2. A color is flashed and a sound is played.
-    3. Counter box reads "1".
+    - The game is started.
+    - A color is flashed and a sound is played.
+    - Counter box reads "1".
+    
    If Start button pressed during game play:
-    1. The game is reset.
+    - The game is reset.
     
    -If Strict button unchecked or checked during gameplay the circle is not clickable until start is clicked
 
-2.Strict Button:
+3. Strict Button:
    While Strict button is unchecked:
-    1. The User has an unlimited amount of attempts.
-    2. If unchecked durning game play all colors flash and a noise is heard.
-    3. If unchecked durning game play Counter box reads "-".
-    4. If unchecked durning game play the game is reset.
+    - The User has an unlimited amount of attempts.
+    - If unchecked/checked durning game play all colors flash and a noise is heard.
+    - If unchecked/checked durning game play Counter box reads "-".
+    - If unchecked/checked durning game play the game is reset.
+    
    While Strict button is checked:
-    1. A sound is played
-    2. The User has one attempt.
-    3. If user guesses wrong the color:
-       1. Counter box reads "No!" and is reset to "1".
-       2. The game is reset.
+    - A sound is played
+    - The User has one attempt.
+    
+     If user guesses wrong the color:
+       - Counter box reads "No!" and is reset to "1".
+       - The game is reset.
+       
     If unchecked or checked during gameplay:
-     1. An sound is played.
-     2. All colors flash.
-     3. Game is reset.
-     4. Counter box reads "-"
+     - An sound is played.
+     - All colors flash.
+     - Game is reset.
+     - Counter box reads "-".
      
+ 4. Colored Circle:
+    - Is not clickable until the power is checked and the start button is pressed.
+    - Changes to the correct color and plays correct sound during game play.
+    - All colors flash when power on/off and when strict mode is selected on/off.
     
    
+  # Issues/Bugs
+  1. When Power is checked and before start is checked player could click on the colored circle and counter box read undifined. I fixed this by using document.location.reload(true) and this reset everything so the circle is activated only by clicking start.
+  2. The strict button was able to turn on or off during gameplay. I fixed this by using clearInterval(intervalId); which reset the gameplay whenever the strict button was turned on/ off.
     
-    
-    
-
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+   
 
 ## Deployment
 This project was developed using the AWSCloud9 IDE, committed to git and pushed to GitHub.
@@ -206,7 +203,7 @@ To run locally, you can clone this repository directly into the editor by pastin
 # Image
 - The image used for the background were obtained from Google Images and are used for educational purposes only. 
 # Audio
--The audio files for card flip sound, matched cards sound and children applauding were sourced from [freesound](https://freesound.org/home/).
+- The audio files were sourced from [freesound](https://freesound.org/home/).
 
 ### Acknowledgements
 
