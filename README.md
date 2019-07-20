@@ -69,30 +69,39 @@ This section is also where you would share links to any wireframes, mockups, dia
 ### Existing Features
 - On arriving at the page, the user can read a quick game description on the top of the page.
 
-- The power button 
+1. The power button 
 - The power button is the button that turns on the game.
-                   - If the power button is not selected the start button and strict button are disabled.
-                   - A noise is played button when checked/unchecked.
-                   - All tiles flash when checked/unchecked.
-                   - When unchecked restarts the javaScript.
+- If the power button is not checked the start button and strict button are disabled.
+- A noise is played button when checked/unchecked.
+ - All tiles flash when checked/unchecked.
+ - When unchecked restarts the javaScript.
+ 
                    
-- The Start button 
+2. The Start button 
 -  All tiles are unclickable until start button is clicked.
-                   -  Starts the game sequence. 
-                   - If clicked on during game play will reset the game.
+-  Starts the game sequence of color "flashes".
+- If clicked on during game play will reset the game.
                    
-- The strict button  
--                 
-                   
-                   
-                   
-                   
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+3. The Strict button  
+-  When the strict button is checked/unchecked the game will reset.
+- When the strict button is checked/unchecked the game will flash all tiles.
+- When the strict button is checked/unchecked the game will play a noise.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+4. The Counter
+- The counter displays the color count which the player is currently on.
+- When a user powers off the game by using the Power button the counter reads "bye".
+- When the player wins a game the counter reads "win!".
+
+5. The colored Circle
+- The colored circle is how the user actually plays the game.
+- The colored circle is a circle divided into four colored sections of Green, Red, Yellow and Blue.
+- When User powers on the game and clicks start, using javascript one of the four sections will change into a lighter color this is done to represent a color flash.
+- When a color is "flashing" a noise will also be played.This is to help the user remember the sequence.
+- When a user clicks on a color it will flash and play a sound.  
 
 ### Features Left to Implement
-- Another feature idea
+- High score
+In the future I'd like to add a high score mode that saves a score locally and is a infinite secquence that continues until user guess wrong. 
 
 ## Technologies Used
 
