@@ -118,10 +118,10 @@ In the future I'd like to add a high score mode that saves a score locally and i
 ## Testing
 This site was tested in google dev tools, responsiveness was tested to ensure that everything works well. Also all features of the page are scaling as intended in tablet and mobile devices.
 
-I  tested mobile responsiveness [Varvy.com](https://varvy.com/mobile/).
-I  tested Html [Varvy.com](https://varvy.com/mobile/).
-I  tested the CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/).
-I  tested the Javascript [jshint.com](https://jshint.com/).
+-I  tested mobile responsiveness [Varvy.com](https://varvy.com/mobile/).
+-I  tested Html [Varvy.com](https://varvy.com/mobile/).
+-I  tested the CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/).
+-I  tested the Javascript [jshint.com](https://jshint.com/).
 
 #Tests
 1. Power Button:
@@ -152,7 +152,7 @@ I  tested the Javascript [jshint.com](https://jshint.com/).
    If Start button pressed during game play:
     - The game is reset.
     
-   -If Strict button unchecked or checked during gameplay the circle is not clickable until start is clicked
+   -If Strict button unchecked or checked during gameplay the circle is not clickable until start is clicked.
 
 3. Strict Button:
    While Strict button is unchecked:
@@ -162,7 +162,7 @@ I  tested the Javascript [jshint.com](https://jshint.com/).
     - If unchecked/checked durning game play the game is reset.
     
    While Strict button is checked:
-    - A sound is played
+    - A sound is played.
     - The User has one attempt.
     
      If user guesses wrong the color:
