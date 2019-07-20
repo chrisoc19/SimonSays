@@ -7,16 +7,25 @@ The Simon game is the exciting memory game of lights and sounds in which players
 A live version can be found on [Github Pages](https://chrisoc19.github.io/SimonSays/)
  
 ### UX
-##Project Goals
-- As a user, I expect to be able to power on and off the game.
-- As a user, I am presented with a random series of button presses.
-- As a user, Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
-- As a user, I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
-- As a user,  If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
-- As a user, I can see how many steps are in the current series of button presses.
-- As a user, If I want to restart, I can hit a button to do so, and the game will return to a single step.
-- As a user,
-- As a user,
+## Project Goals
+The primary goal of Simon Game is to provide a fun, intuitive and child friendly game to entertain it's users. Simon Game has two target audiences, children and their parents.
+
+User Goals:
+
+-  A fun game to play.
+- kid friendly controls.
+- Game controls laid out together and in an intuitive way.
+- Fun images and sounds.
+- Visual and audio rewards while playing.
+- A game with child development value. In this case to improve their memory.
+- A visually appealing, well-functioning game.
+
+Simon Game is a great way to help players meet these needs because:
+
+- Controls are grouped together clearly.
+- Includes audio and visual stimulus as part of the game.
+- Simon Game gives a child a fun environment in which to practice their memory skills.
+- It has been designed with user experience as a priority, not only for a child using it but also for a parent.
 
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
