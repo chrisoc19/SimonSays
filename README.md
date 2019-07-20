@@ -104,12 +104,16 @@ This section is also where you would share links to any wireframes, mockups, dia
 In the future I'd like to add a high score mode that saves a score locally and is a infinite secquence that continues until user guess wrong. 
 
 ## Technologies Used
+- This project uses HTML, CSS and JavaScript programming languages.
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+[AWS Cloud9](https://aws.amazon.com/cloud9/)
+- Developer used AWSCloud9 for their IDE while building the website.
+[Bootstrap](https://getbootstrap.com/)
+- The project uses Bootstrap to help with structure and make the website responsive easily.
+[Google Fonts](https://fonts.google.com/)
+- The project uses Google fonts to style the website fonts.
+[GitHub](https://github.com/)
+ - This project uses GitHub to store and share all project code remotely.
 
 ## Testing
 
@@ -132,26 +136,27 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
+This project was developed using the AWSCloud9 IDE, committed to git and pushed to GitHub.
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+To deploy the following steps were taken. From this [Github](https://github.com/chrisoc19/SimonSays), I went into the menu items near the top of the page, then selected Settings. I then scrolled down to the GitHub Pages section and Under Source click the drop-down menu labelled None and select Master Branch. After the page refreshed I scrolled back down to the GitHub Pages section to retrieve the link to the deployed website.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+# To run locally
+To run locally, you can clone this repository directly into the editor by pasting git clone https://github.com/chrisoc19/SimonSays.git into your terminal.
 
 ## Credits
-
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text in this project was written by the developer.
 
 ### Media
-- The photos used in this site were obtained from ...
+# Image
+- The image used for the background were obtained from Google Images and are used for educational purposes only. 
+# Audio
+-The audio files for card flip sound, matched cards sound and children applauding were sourced from [freesound](https://freesound.org/home/).
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- [StackOverFlow](https://stackoverflow.com/)
+- [Code Institute](https://courses.codeinstitute.net/).
+- [Slack](https://slack.com/intl/en-se/).
+-[W3schools](https://www.w3schools.com/)
 
