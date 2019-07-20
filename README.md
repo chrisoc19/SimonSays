@@ -116,6 +116,65 @@ In the future I'd like to add a high score mode that saves a score locally and i
  - This project uses GitHub to store and share all project code remotely.
 
 ## Testing
+This site was tested in google dev tools, responsiveness was tested to ensure that everything works well. Also all features of the page are scaling as intended in tablet and mobile devices.
+
+I  tested mobile responsiveness [Varvy.com](https://varvy.com/mobile/).
+I  tested Html [Varvy.com](https://varvy.com/mobile/).
+I  tested the CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/).
+I  tested the Javascript [jshint.com](https://jshint.com/).
+
+#Tests
+1. Power Button:
+   While Power button is unchecked:
+    1. The colored circle is not clickable. 
+    2. Start button is disabled.
+    3. Strict button is disabled.
+    4. Counter box is empty.
+  While Power button is checked:
+    1. A sound is played.
+    2. All colors "Flash".
+    3. The colored circle is not clickable.
+    4. Start button is now clickable.
+    5. Strict button is now clickable.
+    6. Counter box reads "-".
+    
+2.Start Button:
+   While Start button is unchecked:
+    1. The colored circle is not clickable.
+    2. Counter box reads "-".
+   While Start button is checked:
+    1. The game is started.
+    2. A color is flashed and a sound is played.
+    3. Counter box reads "1".
+   If Start button pressed during game play:
+    1. The game is reset.
+    
+   -If Strict button unchecked or checked during gameplay the circle is not clickable until start is clicked
+
+2.Strict Button:
+   While Strict button is unchecked:
+    1. The User has an unlimited amount of attempts.
+    2. If unchecked durning game play all colors flash and a noise is heard.
+    3. If unchecked durning game play Counter box reads "-".
+    4. If unchecked durning game play the game is reset.
+   While Strict button is checked:
+    1. A sound is played
+    2. The User has one attempt.
+    3. If user guesses wrong the color:
+       1. Counter box reads "No!" and is reset to "1".
+       2. The game is reset.
+    If unchecked or checked during gameplay:
+     1. An sound is played.
+     2. All colors flash.
+     3. Game is reset.
+     4. Counter box reads "-"
+     
+    
+   
+    
+    
+    
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -123,11 +182,7 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
