@@ -56,9 +56,8 @@ The background was chosen was a sea theme. I chose this theme as I think it will
 
 ## Wireframes
 I used [Balsamiq](https://balsamiq.com/) for the design and planning process for this project.
-- [Balsamiq](https://balsamiq.com/)
-- [Balsamiq](https://balsamiq.com/)
-[Balsamiq](https://balsamiq.com/)
+- [Balsamiq](https://balsamiq.cloud/s2bic8/pnp4g5q)
+
 
 
 
