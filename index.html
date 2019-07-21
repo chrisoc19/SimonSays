@@ -17,10 +17,25 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col text text-box">
+      <div class="col text text-box mobile-margin visible-xs ">
         <h1>Simon Game!</h1>
-        
-        
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">How to play?</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>To begin click on the Power button</p>
+            <p>Get ready to watch, remember, repeat! </p>
+            <p>Click Start when ready to play..</p>
+            <p>If strict mode is enabled you only get one guess so be careful!!...</p>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -36,14 +51,14 @@
   <span class="slider round"></span>
 </label>
 
-          <div  class="remove d-none">
+          <div class="remove d-none">
 
             <div id="turn"></div>
             <div class="text2">
               COUNT
             </div>
-            
-            
+
+
             <div class="button-container">
               <button class="button" id="start">Start</button>
             </div>
@@ -71,13 +86,13 @@
 
     </div>
   </div>
-  
-<div class="container-fluid">
+
+  <div class="container-fluid">
     <div class="row">
-      <div class="col footer">
-        <h1>created by Chris O'Connor</h1>
-        
-        
+      <div class="col footer  mobile-margin visible-xs">
+        <h1 class="footer-text">created by Chris O'Connor</h1>
+
+
       </div>
 
     </div>
@@ -90,7 +105,7 @@
 
 
 
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 
