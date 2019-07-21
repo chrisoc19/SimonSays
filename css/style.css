@@ -1,6 +1,6 @@
 
 body {
-  
+  margin : 0;
   background-image: url("../img/sea.2.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +59,27 @@ body {
   text-align: center;
   color: black;
 }
+@media only screen and (min-width: 315px) {
+ .footer {
+    margin-bottom: 44px;
+  }
+}
+@media only screen and (min-width: 768px) {
+ .footer {
+    margin-bottom: 94px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+ .footer {
+    margin-bottom: 455px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+ .footer {
+    margin-bottom: 40px;
+  }
+}
+
 /* -----------------------------------------------------Simon game Text */
 .text {
   font-family: 'Original Surfer', cursive;
