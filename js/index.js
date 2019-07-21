@@ -30,43 +30,15 @@ const strictButton = document.querySelector("#strict");
 const onButton = document.querySelector("#on");
 const startButton = document.querySelector("#start");
 
-//--------------------------------------------------------------- strictButton
-strictButton.addEventListener('change', (event) => {
-    if (onButton.checked == false) {
-        document.getElementById("#strict").disabled = true;
 
-    }
-    if (strictButton.checked == true) {
-        strict = true;
-        strictSound();
-        clearInterval(intervalId);
-        turnCounter.innerHTML = "-";
-        flashColor();
-        setTimeout(() => {
-            clearColor();
-        }, 800);
 
-    }
-    else {
-        strict = false;
-        strictSound();
-        turnCounter.innerHTML = "-";
-        flashColor();
-        setTimeout(() => {
-            clearColor();
-        }, 800);
-
-    }
-});
-
-function strictSound() {
-    if (noise) {
-        strictNoise.play();
-    }
-    noise = true;
-
-}
 //--------------------------------------------------------------- onButton
+
+$('#on').click(function() {
+    $('.remove').removeClass('d-none');
+    $('.add').addClass('d-none');
+})
+
 onButton.addEventListener('click', (event) => {
     if (onButton.checked == true) {
         on = true;
@@ -123,7 +95,48 @@ startButton.addEventListener('click', (event) => {
         start = false;
         
     }
+    
 });
+
+//--------------------------------------------------------------- strictButton
+
+
+strictButton.addEventListener('change', (event) => {
+    if (onButton.checked == false) {
+        document.getElementById("#strict").disabled = true;
+
+    }
+    if (strictButton.checked == true) {
+        strict = true;
+        strictSound();
+        clearInterval(intervalId);
+        turnCounter.innerHTML = "-";
+        flashColor();
+        setTimeout(() => {
+            clearColor();
+        }, 800);
+
+    }
+    else {
+        strict = false;
+        strictSound();
+        clearInterval(intervalId);
+        turnCounter.innerHTML = "-";
+        flashColor();
+        setTimeout(() => {
+            clearColor();
+        }, 800);
+
+    }
+});
+
+function strictSound() {
+    if (noise) {
+        strictNoise.play();
+    }
+    noise = true;
+
+}
 //---------------------------------------------------------------play()
 function play() {
     win = false;
@@ -272,7 +285,6 @@ function check() {
         winGame();
     }
     if (good == false) {
-        flashColor();
         turnCounter.innerHTML = "NO!";
         setTimeout(() => {
             turnCounter.innerHTML = turn;

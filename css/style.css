@@ -1,3 +1,4 @@
+
 body {
   padding-bottom: 20px;
   background-image: url("../img/sea.2.jpg");
@@ -8,18 +9,32 @@ body {
 }
 
 /* -----------------------------------------------------Simon game Text */
-
+.footer{
+  margin-top: 40px;
+  margin-bottom: 100px;
+  font-family: 'Original Surfer', cursive;
+  text-align: center;
+  color: black;
+}
 .text {
   font-family: 'Original Surfer', cursive;
+  
   text-align: center;
   color: black;
 }
 
 .text-box {
   margin-bottom: 10px;
+  
   background-color: rgba(0, 123, 255, 0);
 }
 
+.newButtons{
+  font-family: 'Original Surfer', cursive;
+  
+  width: 65px;
+  color: black;
+}
 
 
 
@@ -109,6 +124,7 @@ input:checked+.slider:before {
   -webkit-transition-duration: 0.4s;
   /* Safari */
   transition-duration: 0.4s;
+ font-family:  'Original Surfer', cursive;
 }
 
 .button:hover {
