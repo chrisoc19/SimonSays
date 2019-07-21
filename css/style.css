@@ -1,12 +1,13 @@
 
 body {
-  padding-bottom: 20px;
+  
   background-image: url("../img/sea.2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
 }
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -53,7 +54,7 @@ body {
 }
 .footer{
   margin-top: 40px;
-  margin-bottom: 415px;
+  margin-bottom: 40px;
   font-family: 'Original Surfer', cursive;
   text-align: center;
   color: black;
