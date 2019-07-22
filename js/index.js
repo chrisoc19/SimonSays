@@ -9,6 +9,7 @@ let strict = false;
 let start = false;
 let noise = true;
 let on = false;
+let click = false;
 let win;
 
 let oneNoise = new Audio('sounds/drop.mp3');
@@ -43,7 +44,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -61,7 +62,7 @@ window.onclick = function(event) {
 $('#on').click(function() {
     $('.remove').removeClass('d-none');
     $('.add').addClass('d-none');
-})
+});
 
 onButton.addEventListener('click', (event) => {
     if (onButton.checked == true) {
@@ -109,21 +110,33 @@ function off() {
 
 }
 //---------------------------------------------------------------startButton
+$('#start').click(function() {
+    $('#start').prop('disabled', true);
+     setTimeout(() => {
+             $('#start').prop('disabled', false);
+        }, 5000);
+});
 startButton.addEventListener('click', (event) => {
     if (on || win) {
-        play();
+            play();
         start = true;
+    
     }
     if (onButton.checked == false) {
         startButton = 'unclick';
         start = false;
         
     }
-    
-});
+    }); 
+
 
 //--------------------------------------------------------------- strictButton
-
+$('#strict').click(function() {
+    $('#strict').prop('disabled', true);
+     setTimeout(() => {
+             $('#strict').prop('disabled', false);
+        }, 3000);
+});
 
 strictButton.addEventListener('change', (event) => {
     if (onButton.checked == false) {
@@ -204,33 +217,55 @@ function gameTurn() {
 function one() {
     if (noise) {
         oneNoise.play();
+        
     }
     noise = true;
     topLeft.style.backgroundColor = "lightgreen";
+    click = false;
+     setTimeout(() => {
+                click = true;
+            }, 900);
 }
 
 function two() {
     if (noise) {
         twoNoise.play();
+        
     }
     noise = true;
     topRight.style.backgroundColor = "tomato";
+    click = false;
+    setTimeout(() => {
+                click = true;
+            }, 900);
 }
 
 function three() {
     if (noise) {
         threeNoise.play();
+       
     }
     noise = true;
     bottomLeft.style.backgroundColor = "yellow";
+     click = false;
+    setTimeout(() => {
+                click = true;
+            }, 900);
+    
 }
 
 function four() {
     if (noise) {
         fourNoise.play();
+        
     }
     noise = true;
     bottomRight.style.backgroundColor = "lightskyblue";
+     click = false;
+    setTimeout(() => {
+                click = true;
+            }, 900);
+    
 }
 //---------------------------------------------------------------clear color
 function clearColor() {
@@ -247,84 +282,104 @@ function flashColor() {
     bottomRight.style.backgroundColor = "lightskyblue";
 }
 //---------------------------------------------------------------Click Events
+
+
 topLeft.addEventListener('click', (event) => {
-    if (on && start) {
+    
+    if (on && start && click) {
         playerOrder.push(1);
         check();
         one();
+        console.log("one");
         if (!win) {
             setTimeout(() => {
                 clearColor();
-            }, 300);
+            }, 1000);
         }
     }
+     
 
+   
 });
+ 
 
 topRight.addEventListener('click', (event) => {
-    if (on && start) {
+    if (on && start && click) {
         playerOrder.push(2);
         check();
         two();
         if (!win) {
             setTimeout(() => {
                 clearColor();
-            }, 300);
+            }, 1000);
         }
     }
+   
 });
 
+
 bottomLeft.addEventListener('click', (event) => {
-    if (on && start) {
+    if (on && start && click ) {
         playerOrder.push(3);
         check();
         three();
+        console.log("three");
         if (!win) {
             setTimeout(() => {
                 clearColor();
-            }, 300);
+            }, 1000);
         }
     }
-
+    
 });
+ 
+
 
 bottomRight.addEventListener('click', (event) => {
-    if (on && start) {
+    if (on && start && click ) {
         playerOrder.push(4);
         check();
         four();
+        console.log("four");
         if (!win) {
             setTimeout(() => {
                 clearColor();
-            }, 300);
+            }, 1000);
         }
     }
+    
 });
+ 
+
 //---------------------------------------------------------------Check()
 function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
         good = false;
 
-    if (playerOrder.length == 3 && good) {
+    if (playerOrder.length == 20 && good) {
         winGame();
     }
     if (good == false) {
         turnCounter.innerHTML = "NO!";
+        click = false;
         setTimeout(() => {
+            
             turnCounter.innerHTML = turn;
             clearColor();
-
             if (strict) {
                 play();
             }
             else {
+                
                 compTurn = true;
                 flash = 0;
+                click = false;
                 playerOrder = [];
                 good = true;
-                intervalId = setInterval(gameTurn, 800);
+                intervalId = setInterval(gameTurn, 1000);
             }
-        }, 800);
+        }, 1000);
+        
         noise = false;
     }
     if (turn == playerOrder.length && good && !win) {
