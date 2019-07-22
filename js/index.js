@@ -323,7 +323,6 @@ bottomLeft.addEventListener('click', (event) => {
         playerOrder.push(3);
         check();
         three();
-        console.log("three");
         if (!win) {
             setTimeout(() => {
                 clearColor();
@@ -340,7 +339,6 @@ bottomRight.addEventListener('click', (event) => {
         playerOrder.push(4);
         check();
         four();
-        console.log("four");
         if (!win) {
             setTimeout(() => {
                 clearColor();
