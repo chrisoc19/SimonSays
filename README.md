@@ -201,7 +201,7 @@ Using git push command all changes from the local repository were pushed to the 
 
 To deploy my dashboard project from GitHub I followed these steps:
 
-31. On GitHub website I logged onto my account and navigated to my repository;
+1. On GitHub website I logged onto my account and navigated to my repository;
 
 2. Under my repository name, I clicked on Settings tab;
 
@@ -228,6 +228,8 @@ In order to clone my GitHub repository to your local one you should follow these
 6. Type git clone and then paste the URL you copied in Step 3;
 
 $ git clone https://github.com/chrisoc19/SimonSays.git
+
+
 7. Lastly press Enter and your local repository will be created.
 
 
