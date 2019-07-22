@@ -183,7 +183,9 @@ This site was tested in google dev tools, responsiveness was tested to ensure th
   # Issues/Bugs
   1. When Power is checked and before start is checked player could click on the colored circle and counter box read undifined. I fixed this by using document.location.reload(true) and this reset everything so the circle is activated only by clicking start.
   2. The strict button was able to turn on or off during gameplay. I fixed this by using clearInterval(intervalId); which reset the gameplay whenever the strict button was turned on/ off.
-    
+  
+  # Bugs I was unable to fix
+  If the user clicks on the colors many times it causes the game to crash. This is something I hope to fix in the future.
    
 
 ## Deployment
