@@ -224,7 +224,7 @@ function one() {
     click = false;
      setTimeout(() => {
                 click = true;
-            }, 900);
+            }, 500);
 }
 
 function two() {
@@ -237,7 +237,7 @@ function two() {
     click = false;
     setTimeout(() => {
                 click = true;
-            }, 900);
+            }, 500);
 }
 
 function three() {
@@ -250,7 +250,7 @@ function three() {
      click = false;
     setTimeout(() => {
                 click = true;
-            }, 900);
+            }, 500);
     
 }
 
@@ -264,7 +264,7 @@ function four() {
      click = false;
     setTimeout(() => {
                 click = true;
-            }, 900);
+            }, 500);
     
 }
 //---------------------------------------------------------------clear color
