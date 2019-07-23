@@ -61,7 +61,7 @@ I used [Balsamiq](https://balsamiq.com/) for the design and planning process for
 ## Features
  
 ### Existing Features
-- On arriving at the page, the user can read a quick game description on the top of the page.
+- On arriving at the page, the user can click a button and read a quick game description on the top of the page.
 
 1. The power button 
 - The power button is the button that turns on the game.
@@ -100,22 +100,22 @@ In the future I'd like to add a high score mode that saves a score locally and i
 ## Technologies Used
 - This project uses HTML, CSS and JavaScript programming languages.
 
-[AWS Cloud9](https://aws.amazon.com/cloud9/)
-- Developer used AWSCloud9 for their IDE while building the website.
-[Bootstrap](https://getbootstrap.com/)
-- The project uses Bootstrap to help with structure and make the website responsive easily.
-[Google Fonts](https://fonts.google.com/)
-- The project uses Google fonts to style the website fonts.
-[GitHub](https://github.com/)
- - This project uses GitHub to store and share all project code remotely.
+
+- Developer used [AWS Cloud9](https://aws.amazon.com/cloud9/) for their IDE while building the website.
+
+- The project uses [Bootstrap](https://getbootstrap.com/) to help with structure and make the website responsive easily.
+
+- The project uses [Google Fonts](https://fonts.google.com/) to style the website fonts.
+
+ - This project uses [GitHub](https://github.com/) to store and share all project code remotely.
 
 ## Testing
 This site was tested in google dev tools, responsiveness was tested to ensure that everything works well. Also all features of the page are scaling as intended in tablet and mobile devices.
 
--I  tested mobile responsiveness [Varvy.com](https://varvy.com/mobile/).
--I  tested Html [Varvy.com](https://varvy.com/mobile/).
--I  tested the CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/).
--I  tested the Javascript [jshint.com](https://jshint.com/).
+- I  tested mobile responsiveness [Varvy.com](https://varvy.com/mobile/).
+- I  tested Html [Varvy.com](https://varvy.com/mobile/).
+- I  tested the CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/).
+- I  tested the Javascript [jshint.com](https://jshint.com/).
 
 #Tests
 1. Power Button:
