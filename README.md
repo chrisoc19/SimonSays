@@ -28,13 +28,13 @@ Simon Game is a great way to help players meet these needs because:
 - It has been designed with user experience as a priority, not only for a child using it but also for a parent.
 
 ## User story
-- I am presented with a random series of button presses.
-- Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
+- I am presented with a random series of button flashes.
+- Each time I input a series of button presses correctly, I see the same series of button flashes but with an additional step.
 - I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
-- If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
-- I can see how many steps are in the current series of button presses.
+- If I press the wrong button, I am notified that I have done so, and that series of button flashes starts again to remind me of the pattern so I can try again.
+- I can see how many steps are in the current series of button flashes.
 - If I want to restart, I can hit the Start button, and the game will return to a single step.
--  I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
+-  I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button flashes.
 -  I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
 
 ## Design choices
@@ -57,11 +57,6 @@ The background was chosen was a sea theme. I chose this theme as I think it will
 ## Wireframes
 I used [Balsamiq](https://balsamiq.com/) for the design and planning process for this project.
 - [Balsamiq](https://balsamiq.cloud/s2bic8/pnp4g5q)
-
-
-
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
  
