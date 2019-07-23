@@ -82,11 +82,18 @@ body {
 /* -----------------------------------------------------Simon game Text */
 .text {
   font-family: 'Original Surfer', cursive;
-  
   text-align: center;
-  color: black;
+  color: #212529;
+    font-size: 20px;
 }
-
+.text2 {
+  font-family: 'Original Surfer', cursive;
+  text-align: center;
+  color: #212529;
+    font-size: 20px;
+    background-color: #0bea45;
+    border-radius: 24%;
+}
 .text-box {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -96,9 +103,17 @@ body {
 .newButtons{
   font-family: 'Original Surfer', cursive;
   width: 65px;
-  color: black;
+  color: #212529;
+    font-size: 20px;
+    
 }
-
+@media only screen and (max-width: 555px) {
+ .text-box2 {
+   margin-right: 10px;
+    margin-bottom: 10px;
+  }
+ 
+}
 @media only screen and (max-width: 320px) {
  .text-box {
     margin-left: 200px;

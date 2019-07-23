@@ -17,7 +17,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col text text-box mobile-margin">
+      <div class="col text text-box">
         <h1>Simon Game!</h1>
         <!-- Trigger/Open The Modal -->
         <button id="myBtn">How to play?</button>
@@ -45,6 +45,7 @@
       <div class="col-sm-2 switches-wrapper">
         <div class="switches">
               <!-- Power -->
+               <div class="button-container">
           <p class="newButtons">POWER</p>
           <label class="switch">
   <input type="checkbox" class="switch" id="on">
@@ -52,19 +53,20 @@
 </label>
 
           <div class="remove d-none">
+           
                   <!-- Count -->
             <div id="turn"></div>
-            <div class="text2">
-              COUNT
+            <div class="text2 text-box2">
+             LEVEL
             </div>
                 <!-- Start  -->
-            <div class="button-container">
+            
               <button class="button" id="start">Start</button>
             </div>
 
                       <!-- Strict -->
-            <p class="newButtons ">STRICT</p>
-            <label class="switch">
+            <p class="newButtons remove d-none">STRICT</p>
+            <label class="switch remove d-none">
           <input type="checkbox" class="switch " id="strict">
                 <span class="slider round"></span>
               </label>

@@ -219,12 +219,15 @@ function one() {
         oneNoise.play();
         
     }
-    noise = true;
+    setTimeout(() => {
+               noise = true;
     topLeft.style.backgroundColor = "lightgreen";
     click = false;
+            }, 200);
      setTimeout(() => {
                 click = true;
             }, 500);
+            
 }
 
 function two() {
@@ -232,12 +235,16 @@ function two() {
         twoNoise.play();
         
     }
-    noise = true;
+    setTimeout(() => {
+                noise = true;
     topRight.style.backgroundColor = "tomato";
     click = false;
+            }, 200);
+    
     setTimeout(() => {
                 click = true;
             }, 500);
+        
 }
 
 function three() {
@@ -245,12 +252,16 @@ function three() {
         threeNoise.play();
        
     }
-    noise = true;
+    setTimeout(() => {
+                noise = true;
     bottomLeft.style.backgroundColor = "yellow";
      click = false;
+            }, 200);
+    
     setTimeout(() => {
                 click = true;
             }, 500);
+            
     
 }
 
@@ -259,12 +270,16 @@ function four() {
         fourNoise.play();
         
     }
-    noise = true;
+    setTimeout(() => {
+               noise = true;
     bottomRight.style.backgroundColor = "lightskyblue";
      click = false;
+            }, 200);
+   
     setTimeout(() => {
                 click = true;
             }, 500);
+            
     
 }
 //---------------------------------------------------------------clear color
@@ -365,7 +380,12 @@ function check() {
             turnCounter.innerHTML = turn;
             clearColor();
             if (strict) {
-                play();
+                window.alert("You Lose!");
+                setTimeout(() => {
+                    
+               play();
+            }, 1000);
+                
             }
             else {
                 
