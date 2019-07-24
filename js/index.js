@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 let order = [];
 let playerOrder = [];
 let flash;
@@ -20,6 +21,7 @@ let startNoise = new Audio('sounds/startSound.ogg');
 let offNoise = new Audio('sounds/off.ogg');
 let winNoise = new Audio('sounds/winSound.wav');
 let strictNoise = new Audio('sounds/b1.wav');
+let wrongNoise = new Audio('sounds/wrong.wav');
 
 
 const turnCounter = document.querySelector("#turn");
@@ -123,7 +125,7 @@ startButton.addEventListener('click', (event) => {
     
     }
     if (onButton.checked == false) {
-        startButton = 'unclick';
+        
         start = false;
         
     }
@@ -323,6 +325,7 @@ topRight.addEventListener('click', (event) => {
         playerOrder.push(2);
         check();
         two();
+        console.log("two");
         if (!win) {
             setTimeout(() => {
                 clearColor();
@@ -338,6 +341,7 @@ bottomLeft.addEventListener('click', (event) => {
         playerOrder.push(3);
         check();
         three();
+        console.log("three");
         if (!win) {
             setTimeout(() => {
                 clearColor();
@@ -354,6 +358,7 @@ bottomRight.addEventListener('click', (event) => {
         playerOrder.push(4);
         check();
         four();
+        console.log("four");
         if (!win) {
             setTimeout(() => {
                 clearColor();
@@ -365,6 +370,7 @@ bottomRight.addEventListener('click', (event) => {
  
 
 //---------------------------------------------------------------Check()
+
 function check() {
     if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
         good = false;
@@ -373,16 +379,15 @@ function check() {
         winGame();
     }
     if (good == false) {
+        wrongSound()
         turnCounter.innerHTML = "NO!";
         click = false;
         setTimeout(() => {
-            
             turnCounter.innerHTML = turn;
             clearColor();
             if (strict) {
-                window.alert("You Lose!");
+               // window.alert("You Lose!");
                 setTimeout(() => {
-                    
                play();
             }, 1000);
                 
@@ -424,4 +429,10 @@ function winSound() {
     }
     noise = true;
 
+}
+function wrongSound() {
+    if (noise) {
+        wrongNoise.play();
+    }
+    noise = true;
 }
